@@ -29,6 +29,7 @@ a {
 	color: #000111;
 	cursor: pointer;
 }
+
 h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 10px;
@@ -55,15 +56,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navbar-logo {
-/*	display: hidden;*/
-	visibility: hidden;
-	background-image: url('../img/logo-temp.jpg');
+/*	visibility: hidden;*/
+	background-image: url('../img/logo/logoB.png');
 	width: 200px;
-	height: 200px;
+	height: 100px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 2000;
+/*	border-radius: 80% 15% 80% 15%;*/
 }
 
 .navbar-toggler {
@@ -81,11 +82,10 @@ h1,h2,h3,h4,h5,h6 {
 .navbar-nav {
 	display: grid;
 	margin-left: 0;
-	padding: 0;
+	padding: 0.2em;
 	grid-auto-flow: column;
 	grid-auto-columns: max-content;
 	gap: 2em;
-
 }
 
 /*NAV*/
@@ -112,7 +112,7 @@ h1,h2,h3,h4,h5,h6 {
 .gallery-wrapper {
 	display: grid;
 	position: relative;
-	grid-template-columns: 400px 1fr;
+	grid-template-columns: 350px 1fr;
 /*	justify-content: space-between;*/
 	width: auto;
 	height: auto;
@@ -122,8 +122,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .gallery-buttons {
-	display: none;
-/*	display: grid;*/
+/*	display: none;*/
+	display: grid;
 	grid-auto-flow: column;
 	grid-auto-columns: max-content;
 	gap: 1em;
@@ -190,20 +190,19 @@ h1,h2,h3,h4,h5,h6 {
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-/*	bottom: 50%;*/
+	/*	bottom: 50%;*/
 	/*justify-content: center;
 	place-content: center;
 	place-items: center;
 	place-self: center;*/
 	align-items: center;
 	align-content: center;
-/*	background-image: url("../img/nascar/daytona.webp");*/
+	/*	background-image: url("../img/nascar/daytona.webp");*/
 	align-items: center;
 	grid-area: 1 / 2 / 3 / 2;
-
-/*	grid-row-end: auto;*/
-/*	border: 1px solid darkred;*/
-/*	border: 1px solid black;*/
+	/*	grid-row-end: auto;*/
+	/*	border: 1px solid darkred;*/
+	/*	border: 1px solid black;*/
 }
 
 .title span {
@@ -280,6 +279,96 @@ h1,h2,h3,h4,h5,h6 {
 .title .secondary {
 
 }*/
+.content-schedule {
+	display: none;
+	position: fixed;
+/*	display: grid;*/
+	top: 0;
+	background-color: #00011196;
+	width: 100%;
+	height: 100vh;
+	z-index: 3000;
+	justify-content: center;
+	place-items: center;
+}
 
+.schedule-item {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 500px;
+	height: 700px;
+}
 
+.schedule-item img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.close {
+	display: block;
+	position: absolute;
+	right: 0;
+	color: #fff;
+	top: 0;
+	margin: 1em;
+	font-weight: 900;
+
+}
 /*GALLERY*/
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		justify-content: space-around;
+	}
+
+	.gallery {
+		display: block;
+	}
+
+	.navbar-toggler {
+		display: block;
+	}
+
+	.gallery-wrapper {
+		display: block;
+	/*	grid-template-columns: auto;*/
+		width: 100%;
+		max-height: 900px;
+/*		border:1px solid black;*/
+	}
+
+	.gallery-item {
+		width: 100%;
+		height: auto;
+/*		border:1px solid black;*/
+	}
+
+	.title {
+/*		display: block;*/
+		background-size: contain;
+		object-fit: fill;
+		height: 500px;
+/*		text-align: center;*/
+	}
+
+	.news-F1 {
+		width: 90%;
+	}
+
+	.navbar {
+		padding: 0.6em;
+	}
+
+	.navbar-collapse {
+		display: none;
+	}
+
+	.navbar-logo {
+		width: 200px;
+		height: 100px;
+/*		border: 1px solid white;*/
+	}
+
+}
