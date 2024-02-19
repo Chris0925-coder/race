@@ -1,0 +1,285 @@
+:root {
+	--padding-container: 100px 0;
+	--color-title: #001A49;
+/*	--show: block;*/
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*header {
+	min-height: 100svh;
+}*/
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+/*	padding: .4em;*/
+}
+
+a {
+	text-decoration: none;
+	color: #000111;
+	cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: var(--padding-container);
+}
+
+/*NAV*/
+.navbar {
+	display: flex;
+	padding: .5em 80px;
+	background-color: black;
+	width: 100%;
+	height: 150px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-logo {
+/*	display: hidden;*/
+	visibility: hidden;
+	background-image: url('../img/logo-temp.jpg');
+	width: 200px;
+	height: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 2000;
+}
+
+.navbar-toggler {
+	display: none;
+}
+
+.nav-item {
+	list-style: none;
+}
+
+.nav-link {
+	color: #fff;
+}
+
+.navbar-nav {
+	display: grid;
+	margin-left: 0;
+	padding: 0;
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	gap: 2em;
+
+}
+
+/*NAV*/
+
+/*GALLERY*/
+
+.gallery {
+	display: grid;
+/*	grid-template-columns: auto auto auto;*/
+	grid-template-rows: auto auto auto;
+/*	place-content: end;*/
+	gap: 2.5em;
+	width: auto;
+	height: auto;
+	margin: 40px auto;
+}
+
+.content {
+	/* display: flex; */
+	width: auto;
+	height: auto;
+}
+
+.gallery-wrapper {
+	display: grid;
+	position: relative;
+	grid-template-columns: 400px 1fr;
+/*	justify-content: space-between;*/
+	width: auto;
+	height: auto;
+	align-items: center;
+	margin: 0 auto;
+/*	border: 1px solid #303030;*/
+}
+
+.gallery-buttons {
+	display: none;
+/*	display: grid;*/
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	gap: 1em;
+	position: relative;
+	margin: 0 auto;
+}
+
+.gallery-buttons button {
+	width: 100px;
+	padding: .2em;
+	margin: .6em 0;
+}
+
+.gallery-item {
+	position: relative;
+	isolation: isolate;
+	display: flex;
+	flex: 1;
+	width: 100%;
+	height: 400px;
+/*	padding: 1em;*/
+}
+
+.item-image {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	padding: 1em;
+}
+
+.item-description {
+	position: absolute;
+/*	align-self: self-end;*/
+/*	bottom: 0;*/
+	color: #000111;
+	width: 100%;
+	height: auto;
+	right: 0;
+	bottom: 10%;
+	text-align: center;
+	font-weight: 900;
+/*	background-color: #0009;*/
+	filter: drop-shadow(2px 2px 4px #fff);
+	backdrop-filter: blur(9px);
+/*	padding: .3em;*/
+/*	align-items: center;*/
+}
+
+.name, .role {
+/*	filter: blur(13px 13px);*/
+	filter: drop-shadow(16px 16px 20px #fff);
+/*	display: block;*/
+/*	position: absolute;*/
+/*	color: #fff;*/
+}
+
+.title {
+	display: grid;
+	position: relative;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+/*	bottom: 50%;*/
+	/*justify-content: center;
+	place-content: center;
+	place-items: center;
+	place-self: center;*/
+	align-items: center;
+	align-content: center;
+/*	background-image: url("../img/nascar/daytona.webp");*/
+	align-items: center;
+	grid-area: 1 / 2 / 3 / 2;
+
+/*	grid-row-end: auto;*/
+/*	border: 1px solid darkred;*/
+/*	border: 1px solid black;*/
+}
+
+.title span {
+/*	display: block;*/
+/*	flex-direction: column;*/
+/*	position: relative;*/
+/*	bottom: 50%;*/
+/*	margin: 0 auto;*/
+	justify-content: center;
+	align-self: center;
+	justify-self: center;
+	align-items: center;
+	padding: .7em;
+/*	border: 1px solid black;*/
+	/*place-self: center;
+	place-content: center;
+	place-items: center;*/	
+	width: 100%;
+	backdrop-filter: blur(15px);
+}
+
+#fone {
+	background-image: url("../img/f1/mercedes.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+/*	width: 100%;*/
+/*	height: 100%;*/
+	border-radius: 1em;
+	z-index: -1;
+/*	margin: .9em;*/
+}
+
+#nas {
+/*	position: absolute;*/
+/*	align-items: center;*/
+	background-image: url("../img/nascar/daytona.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 1em;
+/*	width: 100%;*/
+/*	height: 100%;*/
+	z-index: -1;
+}
+
+#wrc {
+	background-image: url("../img/wrc/ford.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 1em;
+/*	width: 100%;*/
+/*	height: 100%;*/
+	z-index: -1;
+}
+
+.news-F1 {
+	padding: 0.6em 2em;
+	text-align: justify;
+	width: 70%;
+	margin: 0 auto;
+/*	margin: 1em;*/
+	font-size: 0.8rem;
+}
+
+.news-list li {
+	margin: .5em;
+}
+/*.title .primary {
+
+}
+
+.title .secondary {
+
+}*/
+
+
+/*GALLERY*/
