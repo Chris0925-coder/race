@@ -307,14 +307,24 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .close {
-	display: block;
+/*	display: block;*/
 	position: absolute;
 	right: 0;
 	color: #fff;
-	top: 0;
+	top: 10%;
 	margin: 1em;
 	font-weight: 900;
+	z-index: 6000;
+	border: 1px solid darkred;
+	padding: .6em;
+	border-radius: 50%;
+	cursor: pointer;
+}
 
+.close:hover {
+	background-color: #fff7;
+	border: 1px solid #303030;
+	transition: .3s;
 }
 /*GALLERY*/
 
