@@ -311,12 +311,12 @@ h1,h2,h3,h4,h5,h6 {
 	position: absolute;
 	right: 0;
 	color: #fff;
-	top: 10%;
+	top: 0;
 	margin: 1em;
 	font-weight: 900;
 	z-index: 6000;
-	border: 1px solid darkred;
-	padding: .6em;
+	border: 2px solid darkred;
+	padding: .3em;
 	border-radius: 50%;
 	cursor: pointer;
 }
