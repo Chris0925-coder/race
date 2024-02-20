@@ -239,7 +239,7 @@ h1,h2,h3,h4,h5,h6 {
 #nas {
 /*	position: absolute;*/
 /*	align-items: center;*/
-	background-image: url("../img/nascar/daytona.webp");
+	background-image: url("../img/nascar/lane.webp");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
