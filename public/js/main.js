@@ -23,8 +23,8 @@ close.addEventListener('click', () => {
 
 closeA.addEventListener('click', () => {
     navLink.classList.toggle("navbar-nav_visible");
-    navLink.style.transform = "translateX(0)";
-    navLink.style.transition = "transform 3s ease-in-out";
+    // navLink.style.transform = "translateX(10px)";
+    // navLink.style.transition = "all .3s ease-in-out";
 });
 
 
