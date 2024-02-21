@@ -399,7 +399,7 @@ h1,h2,h3,h4,h5,h6 {
 	.navbar-nav_visible {
 		display: block;
 /*		transition: "all 6s ease-in-out";*/
-		transform: translateX(10px);
+		transform: translateX(0);
 /*		transform: translateX(300px);*/
 /*		transition: "transform 3s ease-in-out";*/
 /*		transform: translateX(-300px);*/
