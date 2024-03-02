@@ -1,4 +1,3 @@
-
 const navBoton = document.querySelector(".navbar-toggler");
 const navLink = document.querySelector(".navbar-collapse");
 const close = document.querySelector(".close");
@@ -17,10 +16,13 @@ showScheduleF1.addEventListener('click', () => {
     schedule.style.display = "grid";
 });
 
-resultA.addEventListener('click', () => {
-    res.style.display = "flex";
-});
+function showRes(a) {
+    resultA.addEventListener('click', () => {
+        a.style.display = "flex";
+    });
+};
 
+showRes(res);
 
 close.addEventListener('click', () => {
     schedule.style.display = "none";
