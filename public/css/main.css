@@ -242,7 +242,17 @@ h1,h2,h3,h4,h5,h6 {
 	/*	margin: .9em;*/
 }
 
-#nas {/*	position: absolute;*//*	align-items: center;*/background-image: url("../img/nascar/lane.webp");background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 1em;/* color: #000111; *//*	width: 100%;*//*	height: 100%;*/z-index: -1;}
+#nas {
+	/*	position: absolute;*/
+	/*	align-items: center;*/
+	background-image: url("../img/nascar/stageone.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position:center;
+	object-fit: cover;
+	border-radius: 1em;/* color: #000111; *//*	width: 100%;*//*	height: 100%;*/
+	z-index: -1;
+}
 
 #wrc {
 	background-image: url("../img/wrc/ford.jpeg");
