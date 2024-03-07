@@ -2,10 +2,12 @@ const navBoton = document.querySelector(".navbar-toggler");
 const navLink = document.querySelector(".navbar-collapse");
 const close = document.querySelector(".close");
 const closeA = document.querySelector(".closeA");
-const closeB = document.querySelector(".closeB");
+const closeB = document.querySelectorAll(".closeB");
 const schedule = document.querySelector(".content-schedule");
 const res = document.querySelector(".res-one");
+const images = document.querySelector(".saudi-img");
 const resultA = document.querySelector(".result-one");
+const resultB = document.querySelector(".news__items");
 const showScheduleF1 = document.querySelector(".view-scheduleF1");
 
 navBoton.addEventListener('click', () => {
@@ -16,13 +18,14 @@ showScheduleF1.addEventListener('click', () => {
     schedule.style.display = "grid";
 });
 
-function showRes(a) {
-    resultA.addEventListener('click', () => {
-        a.style.display = "flex";
+function showRes(a,b) {
+    a.addEventListener('click', () => {
+        b.style.display = "flex";
     });
 };
 
-showRes(res);
+showRes(resultA, res);
+showRes(resultB, images);
 
 close.addEventListener('click', () => {
     schedule.style.display = "none";
@@ -38,11 +41,15 @@ closeA.addEventListener('click', () => {
     // navLink.style.transition = "all .3s ease-in-out";
 });
 
-closeB.addEventListener('click', () => {
-    // navLink.classList.toggle("navbar-nav_visible");
-    res.style.display = "none";
-    // navLink.style.transform = "translateX(10px)";
-    // navLink.style.transition = "all .3s ease-in-out";
-});
+function cc(a) {
+    a.addEventListener('click', () => {
+        // navLink.classList.toggle("navbar-nav_visible");
+        res.style.display = "none";
+        images.style.display = "none";
+        // navLink.style.transform = "translateX(10px)";
+        // navLink.style.transition = "all .3s ease-in-out";
+    });
+};
 
-
+cc(closeB[0]);
+cc(closeB[1])
