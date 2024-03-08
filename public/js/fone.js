@@ -28,7 +28,7 @@ navButton(closeA);
 
 function showRes(a,b) {
     a.addEventListener('click', () => {
-        b.style.display = "flex";
+        b.style.display = "block";
     });
 };
 
