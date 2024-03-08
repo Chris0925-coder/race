@@ -10,9 +10,16 @@ const resultA = document.querySelector(".result-one");
 const resultB = document.querySelector(".news__content");
 const showScheduleF1 = document.querySelector(".view-scheduleF1");
 
-navBoton.addEventListener('click', () => {
-    navLink.classList.toggle("navbar-nav_visible");
-});
+function navButton(a) {
+    a.addEventListener('click', () => {
+        navLink.classList.toggle("navbar-nav_visible");
+    });
+}
+navButton(navBoton);
+navButton(closeA);
+// navBoton.addEventListener('click', () => {
+//     navLink.classList.toggle("navbar-nav_visible");
+// });
 
 showScheduleF1.addEventListener('click', () => {
     schedule.style.display = "grid";
@@ -35,21 +42,21 @@ close.addEventListener('click', () => {
     // navLink.classList.toggle("navbar-nav_visible");
 });
 
-closeA.addEventListener('click', () => {
-    navLink.classList.toggle("navbar-nav_visible");
+// closeA.addEventListener('click', () => {
+//     navLink.classList.toggle("navbar-nav_visible");
     // navLink.style.transform = "translateX(10px)";
     // navLink.style.transition = "all .3s ease-in-out";
-});
+// });
 
-function cc(a) {
+function cc(a, b) {
     a.addEventListener('click', () => {
         // navLink.classList.toggle("navbar-nav_visible");
-        res.style.display = "none";
-        images.style.display = "none";
+        b.style.display = "none";
+        // images.style.display = "none";
         // navLink.style.transform = "translateX(10px)";
         // navLink.style.transition = "all .3s ease-in-out";
     });
 };
 
-cc(closeB[0]);
-cc(closeB[1])
+cc(closeB[0], res);
+cc(closeB[1], images)

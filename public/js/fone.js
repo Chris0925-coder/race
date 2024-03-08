@@ -7,10 +7,22 @@ const resultA = document.querySelector(".result-one");
 const resultB = document.querySelector(".result-two");
 const resultC = document.querySelector(".result-three");
 const closeB = document.querySelectorAll(".closeB");
+const closeA = document.querySelector(".closeA");
 
-navBoton.addEventListener('click', () => {
-    navLink.classList.toggle("navbar-nav_visible");
-});
+function navButton(a) {
+    a.addEventListener('click', () => {
+        navLink.classList.toggle("navbar-nav_visible");
+    });
+}
+navButton(navBoton);
+navButton(closeA);
+// navBoton.addEventListener('click', () => {
+//     navLink.classList.toggle("navbar-nav_visible");
+// });
+
+// closeA.addEventListener('click', () => {
+//     navLink.classList.toggle("navbar-nav_visible");
+// });
 
 function showRes(a,b) {
     a.addEventListener('click', () => {
