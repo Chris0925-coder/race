@@ -59,4 +59,4 @@ function cc(a, b) {
 };
 
 cc(closeB[0], res);
-cc(closeB[1], images)
+cc(closeB[1], images);

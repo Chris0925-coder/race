@@ -8,6 +8,8 @@ const resultB = document.querySelector(".result-two");
 const resultC = document.querySelector(".result-three");
 const closeB = document.querySelectorAll(".closeB");
 const closeA = document.querySelector(".closeA");
+const resul = document.querySelector(".news__content");
+const images = document.querySelector(".saudi-img");
 
 function navButton(a) {
     a.addEventListener('click', () => {
@@ -39,7 +41,9 @@ function close(a,b) {
 showRes(resultA, res);
 showRes(resultB, resTwo);
 showRes(resultC, resThree);
+showRes(resul, images);
 
 close(closeB[0], res);
 close(closeB[1], resTwo);
 close(closeB[2], resThree);
+close(closeB[3], images);
