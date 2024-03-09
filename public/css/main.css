@@ -307,6 +307,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .results {
 	display: flex;
+	flex-direction: column;
 	margin: .5em;
 	justify-content: center;
 }
@@ -316,6 +317,7 @@ h1,h2,h3,h4,h5,h6 {
 	padding: .2em;
 	border-radius: .4em;
 	cursor: pointer;
+	width: auto;
 }
 .result-one:hover {
 	color: #fff;
@@ -374,6 +376,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .news-article {
+/*	display: flex;*/
 	padding: .9em;
 	text-align: center;
 }
