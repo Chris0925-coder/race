@@ -394,12 +394,16 @@ footer {
 /*		place-content: center;*/
 /*		grid-column: 1 / 2;*/
 	}
-
+	
 	.navbar-nav {
-		display: block;
-		position: relative;
-		top: 15%;
-/*		gap: 1em;*/
+		display: flex;
+	    position: relative;
+	    flex-direction: column;
+	    top: 15%;
+	    gap: 0;
+	    /* border: 1px solid #fff; */
+	    /* justify-content: end; */
+	    place-items: end;	
 	}
 
 	.nav-item {

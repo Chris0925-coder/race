@@ -90,14 +90,14 @@ h1,h2,h3,h4,h5,h6 {
 	font-size: 0.7rem;
 }
 
-.nav-item.active {
+.navbar-nav .active {
 /*  	padding: 3px;*/
   	border-bottom: 2px solid #eee;
   	opacity: 0.8;
 }
 
 .nav-item:hover:not(.active) {
-	  top: 100%;  
+	  top: 100%; 
 	  transition: all 0.5s ease-in-out;
 	  border-bottom: 2px solid #fff;
 }
@@ -610,17 +610,22 @@ footer {
 	}
 
 	.navbar-nav {
-		display: block;
-		position: relative;
-		top: 15%;
+		display: flex;
+	    position: relative;
+	    flex-direction: column;
+	    top: 15%;
+	    gap: 0;
+	    /* border: 1px solid #fff; */
+	    /* justify-content: end; */
+	    place-items: end;	
 	}
 
 	.nav-item {
-		display: block;
-		position: relative;
-/*		right: 0;*/
-/*		border: 1px solid #fff;*/
+/*		display: block;*/
+/*		position: relative;*/
+		right: 0;
 		text-align: right;
+		width: fit-content;
 		margin: 2em;
 /*	    top: ;*/
 	}
