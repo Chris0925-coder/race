@@ -138,7 +138,7 @@ h1,h2,h3,h4,h5,h6 {
 .result-one, 
 .result-two, 
 .result-three {
-	border: 2px solid darkred;
+	border-bottom: 2px solid darkred;
 	padding: .2em;
 	border-radius: .4em;
 	cursor: pointer;
@@ -235,6 +235,17 @@ h1,h2,h3,h4,h5,h6 {
 	height: auto;
 	justify-content: center;
 /*	border: 1px solid red;*/
+}
+
+.results-title {
+	border-bottom: .3em solid #8b00008c;
+	padding: .2em;
+	border-radius: .4em;
+	cursor: pointer;
+	font-size: clamp(.6rem, 3vw, .8rem);
+
+/*	width: auto;*/
+	margin: 0.3em auto;
 }
 
 .position-img {

@@ -319,10 +319,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .result-one {
-	border: .3em solid #8b00008c;
+	border-bottom: .3em solid #8b00008c;
 	padding: .2em;
 	border-radius: .4em;
 	cursor: pointer;
+	font-size: clamp(.6rem, 3vw, .8rem);
 /*	width: auto;*/
 	margin: 0 auto;
 }
