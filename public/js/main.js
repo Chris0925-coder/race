@@ -7,7 +7,7 @@ const schedule = document.querySelector(".content-schedule");
 const res = document.querySelector(".res-one");
 const images = document.querySelector(".saudi-img");
 const resultA = document.querySelector(".result-one");
-const resultB = document.querySelector(".news__content");
+// const resultB = document.querySelector(".news__content");
 const showScheduleF1 = document.querySelector(".view-scheduleF1");
 
 function navButton(a) {
@@ -32,7 +32,7 @@ function showRes(a,b) {
 };
 
 showRes(resultA, res);
-showRes(resultB, images);
+// showRes(resultB, images);
 
 close.addEventListener('click', () => {
     schedule.style.display = "none";
