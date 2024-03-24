@@ -254,7 +254,7 @@ h1,h2,h3,h4,h5,h6 {
 	border-bottom: .3em solid #8b00008c;
 	padding: .2em;
 	border-radius: .4em;
-	cursor: pointer;
+	cursor: default;
 	font-size: clamp(.6rem, 3vw, .8rem);
 
 /*	width: auto;*/
