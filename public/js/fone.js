@@ -9,7 +9,9 @@ const resultC = document.querySelector(".result-three");
 const closeB = document.querySelectorAll(".closeB");
 const closeA = document.querySelector(".closeA");
 const resul = document.querySelector(".news__content");
+const resulA = document.querySelector(".news__content--australian");
 const images = document.querySelector(".saudi-img");
+const imagesAus = document.querySelector(".australian-img");
 
 function navButton(a) {
     a.addEventListener('click', () => {
@@ -42,8 +44,11 @@ showRes(resultA, res);
 showRes(resultB, resTwo);
 showRes(resultC, resThree);
 showRes(resul, images);
+showRes(resulA, imagesAus);
+
 
 close(closeB[0], res);
 close(closeB[1], resTwo);
 close(closeB[2], resThree);
 close(closeB[3], images);
+close(closeB[4], imagesAus);
