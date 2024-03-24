@@ -8,10 +8,12 @@ const resultB = document.querySelector(".result-two");
 const resultC = document.querySelector(".result-three");
 const closeB = document.querySelectorAll(".closeB");
 const closeA = document.querySelector(".closeA");
+const resulBah = document.querySelector(".news__content--bahrain");
 const resul = document.querySelector(".news__content");
-const resulA = document.querySelector(".news__content--australian");
+const resulA = document.querySelector(".news__content--australia");
+const imagesBah = document.querySelector(".bahrain-img");
 const images = document.querySelector(".saudi-img");
-const imagesAus = document.querySelector(".australian-img");
+const imagesAus = document.querySelector(".australia-img");
 
 function navButton(a) {
     a.addEventListener('click', () => {
@@ -30,7 +32,7 @@ navButton(closeA);
 
 function showRes(a,b) {
     a.addEventListener('click', () => {
-        b.style.display = "block";
+        b.style.display = "grid";
     });
 };
 
@@ -43,12 +45,15 @@ function close(a,b) {
 showRes(resultA, res);
 showRes(resultB, resTwo);
 showRes(resultC, resThree);
+showRes(resulBah, imagesBah);
 showRes(resul, images);
 showRes(resulA, imagesAus);
+
 
 
 close(closeB[0], res);
 close(closeB[1], resTwo);
 close(closeB[2], resThree);
-close(closeB[3], images);
-close(closeB[4], imagesAus);
+close(closeB[3], imagesBah);
+close(closeB[4], images);
+close(closeB[5], imagesAus);
