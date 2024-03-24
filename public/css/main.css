@@ -139,13 +139,14 @@ h1,h2,h3,h4,h5,h6 {
 .gallery-wrapper {
 	display: grid;
 	position: relative;
-	grid-template-columns: 350px 1fr;
+	grid-template-columns: 350px auto;
+	grid-template-rows: auto;
 	/*	justify-content: space-between;*/
 	width: auto;
-	height: 300px;
+	height: auto;
 	align-items: center;
-	margin: 0 auto;
-	/*	border: 1px solid #303030;*/
+	margin: 0 40px;
+/*		border: 1px solid #303030;*/
 }
 
 .gallery-buttons {
@@ -170,14 +171,14 @@ h1,h2,h3,h4,h5,h6 {
 	isolation: isolate;
 	display: flex;
 	flex: 1;
-	width: 100%;
-	height: 200px;
+	width: auto;
+	height: 300px;
 	/*	padding: 1em;*/
 }
 
 .item-image {
 	display: block;
-	position: absolute;
+/*	position: absolute;*/
 	width: 100%;
 	height: 100%;
 	z-index: -1;
@@ -271,13 +272,14 @@ h1,h2,h3,h4,h5,h6 {
 #nas {
 	/*	position: absolute;*/
 	/*	align-items: center;*/
-	background-image: url("../img/nascar/cupseries.jfif");
+	background-image: url("../img/nascar/winner.jpg");
 	background-size: 60% 100%;
 	background-repeat: no-repeat;
 	background-position:center;
 	object-fit: cover;
 	border-radius: 1em;/* color: #000111; *//*	width: 100%;*//*	height: 100%;*/
 	z-index: -1;
+/*	border: 1px solid black;*/
 }
 
 #wrc {
@@ -670,25 +672,33 @@ footer {
 	}
 
 	.gallery-wrapper {
-		display: block;
-	/*	grid-template-columns: auto;*/
+		display: flex;
+		flex-direction: column;
+/*		grid-template-columns: 1fr;*/
+/*		grid-template-rows: auto auto;*/
 		width: 100%;
-		height: 600px;
+		height: auto;
 		padding: 1em;
+		margin: 0;
 /*		border:1px solid black;*/
 	}
 
 	.gallery-item {
-		width: 100%;
-		height: auto;
+		display: block;
+		width: auto;
+		height: 300px;
 /*		border:1px solid black;*/
 	}
 
+	./*item-image {
+
+	}
+*/
 	.title {
 /*		display: block;*/
 		background-size: contain;
 		object-fit: fill;
-		height: 500px;
+		height: 900px;
 /*		text-align: center;*/
 	}
 
@@ -722,6 +732,9 @@ footer {
 
 	#fone, #nas, #wrc {
 		background-size: cover;
+		height: 600px;
+		background-position: center;
+		object-position: center;
 	}
 
 }
