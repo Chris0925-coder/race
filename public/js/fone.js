@@ -11,9 +11,11 @@ const closeA = document.querySelector(".closeA");
 const resulBah = document.querySelector(".news__content--bahrain");
 const resul = document.querySelector(".news__content");
 const resulA = document.querySelector(".news__content--australia");
+const resulS = document.querySelector(".news__content--susuka");
 const imagesBah = document.querySelector(".bahrain-img");
 const images = document.querySelector(".saudi-img");
 const imagesAus = document.querySelector(".australia-img");
+const imagesSu = document.querySelector(".susuka-img");
 
 function navButton(a) {
     a.addEventListener('click', () => {
@@ -48,6 +50,8 @@ showRes(resultC, resThree);
 showRes(resulBah, imagesBah);
 showRes(resul, images);
 showRes(resulA, imagesAus);
+showRes(resulS, imagesSu);
+
 
 
 
@@ -57,3 +61,4 @@ close(closeB[2], resThree);
 close(closeB[3], imagesBah);
 close(closeB[4], images);
 close(closeB[5], imagesAus);
+close(closeB[6], imagesSu);
