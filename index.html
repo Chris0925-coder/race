@@ -195,6 +195,30 @@
 		<div class="res-one">
 			<article class="res-content"><img src="public/img/f1/raceaustralia.jpg" alt="resultados"><span class="closeB">X</span></article>
 		</div>
+		<section class="container">
+			
+			<script>
+			  window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '{your-app-id}',
+			      cookie     : true,
+			      xfbml      : true,
+			      version    : '{api-version}'
+			    });
+			      
+			    FB.AppEvents.logPageView();   
+			      
+			  };
+
+			  (function(d, s, id){
+			     var js, fjs = d.getElementsByTagName(s)[0];
+			     if (d.getElementById(id)) {return;}
+			     js = d.createElement(s); js.id = id;
+			     js.src = "https://connect.facebook.net/en_US/sdk.js";
+			     fjs.parentNode.insertBefore(js, fjs);
+			   }(document, 'script', 'facebook-jssdk'));
+			</script>
+		</section>
 
 		<!-- <div class="saudi-img">
 			<article class="res-content"><img src="public/img/f1/qualify.jfif" alt="resultados"><span class="closeB">X</span></article> -->
