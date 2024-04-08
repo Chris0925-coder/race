@@ -60,3 +60,8 @@ function cc(a, b) {
 
 cc(closeB[0], res);
 // cc(closeB[1], images);
+
+
+const date = document.querySelector('.date');
+
+date.append(new Date ().getFullYear ());
