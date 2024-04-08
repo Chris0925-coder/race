@@ -1,0 +1,63 @@
+{
+ "lang": "es",
+ "dir": "ltr",
+ "name": "CHRISTIAN Web Developer",
+ "short_name": "ChrisWEBDEV",
+ "icons": [
+    {
+   "src": "\/public/img/logo/logo.png",
+   "sizes": "16x16",
+   "type": "image\/png",
+   "density": "0.75"
+  },
+  {
+   "src": "\/public/img/logo/logo.png",
+   "sizes": "32x32",
+   "type": "image\/png",
+   "density": "0.75"
+  },
+  {
+   "src": "\/public/img/logo/logo.png",
+   "sizes": "36x36",
+   "type": "image\/png",
+   "density": "0.75"
+  },
+  {
+   "src": "\/public/img/logo/logo.png",
+   "sizes": "48x48",
+   "type": "image\/png",
+   "density": "1.0"
+  },
+  {
+   "src": "\/public/img/logo/logo.png",
+   "sizes": "72x72",
+   "type": "image\/png",
+   "density": "1.5"
+  },
+  {
+   "src": "\/public/img/logo/logo.png",
+   "sizes": "96x96",
+   "type": "image\/png",
+   "density": "2.0"
+  },
+  {
+   "src": "\/public/img/logo/logo.png",
+   "sizes": "144x144",
+   "type": "image\/png",
+   "density": "3.0"
+  },
+  {
+   "src": "\/public/img/logo/logo.png",
+   "sizes": "192x192",
+   "form_factor": "wide",
+   "type": "image\/png",
+   "density": "4.0"
+  }
+ ],
+ "scope": "/",
+ "id": "985895733055530",
+ "start_url": "/index.html",
+ "display_override": ["fullscreen", "minimal-ui"],
+ "display": "standalone",
+ "orientation": "portrait"
+}
