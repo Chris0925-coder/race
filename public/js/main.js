@@ -68,61 +68,61 @@ const date = document.querySelector('.date');
 date.append(new Date ().getFullYear ());
 
 
-$(function () {
-    let appId = '985895733055530';
-    let scopes = 'name, email, user_friends, user_online_presence';
-    let btn_login = '<a href="#" id="login" class="fb_btn"><button type="submit"></button></a>';
-    let divSession = '<div id="fb-session">'+
-                    '<strong></strong>'+
-                    '<img>'+
-                    '<a href="#" id="logout" class="btn_logout">Cerrar sesión</a>'+
-                    '</div>';
+// $(function () {
+//     let appId = '985895733055530';
+//     let scopes = 'name, email, user_friends, user_online_presence';
+//     let btn_login = '<a href="#" id="login" class="fb_btn"><button type="submit"></button></a>';
+//     let divSession = '<div id="fb-session">'+
+//                     '<strong></strong>'+
+//                     '<img>'+
+//                     '<a href="#" id="logout" class="btn_logout">Cerrar sesión</a>'+
+//                     '</div>';
 
-     window.fbAsyncInit = function() {
-        FB.init({
-          appId      : appId,
-          status     : true,
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v19.0'
-        });
+//      window.fbAsyncInit = function() {
+//         FB.init({
+//           appId      : appId,
+//           status     : true,
+//           cookie     : true,
+//           xfbml      : true,
+//           version    : 'v19.0'
+//         });
           
-        // FB.AppEvents.logPageView();
+//         // FB.AppEvents.logPageView();
 
-        FB.getLoginStatus(function(response) {
-        statusChangeCallback(response, function() {
-            // callback(data);
-        });
-    });
+//         FB.getLoginStatus(function(response) {
+//         statusChangeCallback(response, function() {
+//             // callback(data);
+//         });
+//     });
           
-      };
+//       };
 
 
-function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-    console.log('statusChangeCallback');
-    console.log(response);                   // The current login status of the person.
-    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-      testAPI();  
-    } else {                                 // Not logged into your webpage or we are unable to tell.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this webpage.';
-    }
-  }
+// function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+//     console.log('statusChangeCallback');
+//     console.log(response);                   // The current login status of the person.
+//     if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+//       testAPI();  
+//     } else {                                 // Not logged into your webpage or we are unable to tell.
+//       document.getElementById('status').innerHTML = 'Please log ' +
+//         'into this webpage.';
+//     }
+//   }
 
-  function checkLoginState() {               // Called when a person is finished with the Login Button.
-    FB.getLoginStatus(function(response) {   // See the onlogin handler
-      statusChangeCallback(response);
-    });
-  }
+//   function checkLoginState() {               // Called when a person is finished with the Login Button.
+//     FB.getLoginStatus(function(response) {   // See the onlogin handler
+//       statusChangeCallback(response);
+//     });
+//   }
 
  
-  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
+//   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+//     console.log('Welcome!  Fetching your information.... ');
+//     FB.api('/me', function(response) {
+//       console.log('Successful login for: ' + response.name);
+//       document.getElementById('status').innerHTML =
+//         'Thanks for logging in, ' + response.name + '!';
+//     });
+//   }
 
-});
+// });
