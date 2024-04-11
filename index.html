@@ -62,7 +62,10 @@
 	<link rel="shortcut icon" type="image/png" sizes="48x48" href="./favicon.png" />
 
 	<link rel="stylesheet" type="text/css" href="public/css/main.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	<script defer type="text/javascript" src="public/js/main.js"></script>
+
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </head>
 <body>
 	<header>
@@ -232,21 +235,14 @@
 		<div class="res-one">
 			<article class="res-content"><img src="public/img/f1/raceaustralia.jpg" alt="resultados"><span class="closeB">X</span></article>
 		</div>
-		<section class="container">
-			
-			<script>
-			  window.fbAsyncInit = function() {
-			    FB.init({
-			      appId      : '{985895733055530}',
-			      cookie     : true,
-			      xfbml      : true,
-			      version    : '{api-version}'
-			    });
-			      
-			    FB.AppEvents.logPageView();   
-			      
-			  };
 
+
+		<section class="container">
+			<!-- <h2>FB</h2> -->
+			<div>
+				<button type="submit"><a href="#" id="login" class="fb_btn">Inicia</a></button>
+			</div>
+			<script>
 			  (function(d, s, id){
 			     var js, fjs = d.getElementsByTagName(s)[0];
 			     if (d.getElementById(id)) {return;}
@@ -256,7 +252,11 @@
 			   }(document, 'script', 'facebook-jssdk'));
 			</script>
 		</section>
+		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+		</fb:login-button>
 
+		<div id="status">
+		</div>
 		<!-- <div class="saudi-img">
 			<article class="res-content"><img src="public/img/f1/qualify.jfif" alt="resultados"><span class="closeB">X</span></article> -->
 			

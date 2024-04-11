@@ -631,7 +631,7 @@ footer {
 /*		border: 1px solid #fff;*/
 /*		align-content: space-between;*/
 		text-align: right;
-		transform: translateX(500px);
+		transform: translateX(100%);
 		transition: all .3s ease-in-out;
 /*		justify-content: flex-end;*/
 /*		place-items: center;*/
