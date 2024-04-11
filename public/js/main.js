@@ -84,7 +84,7 @@ $(function () {
           status     : true,
           cookie     : true,
           xfbml      : true,
-          version    : '{api-version}'
+          version    : 'v19.0'
         });
           
         // FB.AppEvents.logPageView();
