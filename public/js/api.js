@@ -28,7 +28,7 @@ next.addEventListener('click', moveGallery);
 prev.addEventListener('click', moveGallery);
 
 function moveGallery(e) {
-    if(e.terget.id === 'next' || e.target.parentElement.id === 'next') {
+    if(e.target.id === 'next' || e.target.parentElement.id === 'next') {
         feed.scrollLeft += feed.offsetWidth;
     } else {
         feed.scrollLeft -= feed.offsetWidth;
