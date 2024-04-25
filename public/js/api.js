@@ -12,6 +12,7 @@ fetch(url)
 
 function CrearHtml(data) {
     for (const img of data) {
+        console.log(img);
         gallery.innerHTML += `<div class="image overflow">
                             <img loading="lazy" src="${img.media_url}" alt="#">
                             <div class="opacity__hover">
