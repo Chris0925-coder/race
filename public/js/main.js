@@ -67,9 +67,46 @@ const date = document.querySelector('.date');
 
 date.append(new Date ().getFullYear ());
 
+const gallery = document.querySelector('.gallery');
+const feed = document.querySelector('.gallery__container');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
+
+const token = 'IGQWRNbHlNOGF0UHdsQ21hYXZAkbFg0eng5NjNxVGkyMjUtWVNURHl5ZAmxLZAGItRGd0ZADV5b05mVENfWE1vRDJkN1YxSHE2QUtNQ0szWFVXdHlmUUpaS0pLQ1hLeV9kRk05X19ValFjQUgzMWpZAdHlOcm1GTVdpR3MZD';
+const url = `https://graph.instagram.com/me/media?fields=thumbnail_url,media_url,caption,permalink&limit=40&access_token=${token}`; 
+
+fetch(url)
+.then(res => res.json())
+.then(data => CrearHtml(data.data))
+
+function CrearHtml(data) {
+    for (const img of data) {
+        gallery.innerHTML += `<div class="image overflow">
+                            <img loading="lazy" src="${img.media_url}" alt="#">
+                            <div class="opacity__hover">
+                                <a href="${img.permalink}" class="caption">
+                                    <p>${img.caption.slice(0,100)}</p>
+                                </a>
+                            </div>
+                        </div>`;
+    }
+};
+
+next.addEventListener('click', moveGallery);
+
+prev.addEventListener('click', moveGallery);
+
+function moveGallery(e) {
+    if(e.terget.id === 'next' || e.target.parentElement.id === 'next') {
+        feed.scrollLeft += feed.offsetWidth;
+    } else {
+        feed.scrollLeft -= feed.offsetWidth;
+    }
+};
+
 
 // $(function () {
-//     let appId = '985895733055530';
+//     let appId = '122134103930225454';
 //     let scopes = 'name, email, user_friends, user_online_presence';
 //     let btn_login = '<a href="#" id="login" class="fb_btn"><button type="submit"></button></a>';
 //     let divSession = '<div id="fb-session">'+
@@ -87,36 +124,36 @@ date.append(new Date ().getFullYear ());
 //           version    : 'v19.0'
 //         });
           
-//         // FB.AppEvents.logPageView();
+        // FB.AppEvents.logPageView();
 
-//         FB.getLoginStatus(function(response) {
-//         statusChangeCallback(response, function() {
-//             // callback(data);
-//         });
-//     });
+    //     FB.getLoginStatus(function(response) {
+    //     statusChangeCallback(response, function() {
+    //         callback(data);
+    //     });
+    // });
           
-//       };
+    //   };
 
 
-// function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+// function statusChangeCallback(response) {  
 //     console.log('statusChangeCallback');
-//     console.log(response);                   // The current login status of the person.
-//     if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+//     console.log(response);
+//     if (response.status === 'connected') {  
 //       testAPI();  
-//     } else {                                 // Not logged into your webpage or we are unable to tell.
+//     } else {                                 
 //       document.getElementById('status').innerHTML = 'Please log ' +
 //         'into this webpage.';
 //     }
 //   }
 
-//   function checkLoginState() {               // Called when a person is finished with the Login Button.
-//     FB.getLoginStatus(function(response) {   // See the onlogin handler
+//   function checkLoginState() {               
+//     FB.getLoginStatus(function(response) {   
 //       statusChangeCallback(response);
 //     });
 //   }
 
  
-//   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+//   function testAPI() {                      
 //     console.log('Welcome!  Fetching your information.... ');
 //     FB.api('/me', function(response) {
 //       console.log('Successful login for: ' + response.name);
