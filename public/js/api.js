@@ -3,8 +3,8 @@ const feed = document.querySelector('.gallery__container');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 
-const token = 'IGQWRNbHlNOGF0UHdsQ21hYXZAkbFg0eng5NjNxVGkyMjUtWVNURHl5ZAmxLZAGItRGd0ZADV5b05mVENfWE1vRDJkN1YxSHE2QUtNQ0szWFVXdHlmUUpaS0pLQ1hLeV9kRk05X19ValFjQUgzMWpZAdHlOcm1GTVdpR3MZD';
-const url = `https://graph.instagram.com/me/media?fields=thumbnail_url,media_url,caption,permalink&limit=40&access_token=${token}`; 
+const token = 'IGQWRPS2FIYWx6MUtxdzk5RkpVNDctYUwzUEE2bjJwalNiaWFUcm5wUlFUNjEwbG43X3NoRWgwWHQ1aWM1R3REZAWpsZAk8yY25XTVd3VXczblJqMXhrcC10S1k1cFJ6RjlOQS1mTDhfODNNVllXUmhVNFhQLUhfWEUZD';
+const url = `https://graph.instagram.com/me/media?fields=thumbnail_url,media_url,caption,permalink&limit=80&access_token=${token}`; 
 
 fetch(url)
 .then(res => res.json())
