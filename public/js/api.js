@@ -12,7 +12,7 @@ fetch(url)
 
 function CrearHtml(data) {
     for (const img of data) {
-        console.log(data);
+        // console.log(data);
         // let caption = img.caption;
         // let cap = caption;
         if (img.caption === undefined) {img.caption = ''}
