@@ -105,61 +105,61 @@ date.append(new Date ().getFullYear ());
 // };
 
 
-// $(function () {
-//     let appId = '122134103930225454';
-//     let scopes = 'name, email, user_friends, user_online_presence';
-//     let btn_login = '<a href="#" id="login" class="fb_btn"><button type="submit"></button></a>';
-//     let divSession = '<div id="fb-session">'+
-//                     '<strong></strong>'+
-//                     '<img>'+
-//                     '<a href="#" id="logout" class="btn_logout">Cerrar sesión</a>'+
-//                     '</div>';
+$(function () {
+    let appId = '122134103930225454';
+    let scopes = 'name, email, user_friends, user_online_presence';
+    let btn_login = '<a href="#" id="login" class="fb_btn"><button type="submit"></button></a>';
+    let divSession = '<div id="fb-session">'+
+                    '<strong></strong>'+
+                    '<img>'+
+                    '<a href="#" id="logout" class="btn_logout">Cerrar sesión</a>'+
+                    '</div>';
 
-//      window.fbAsyncInit = function() {
-//         FB.init({
-//           appId      : appId,
-//           status     : true,
-//           cookie     : true,
-//           xfbml      : true,
-//           version    : 'v19.0'
-//         });
+     window.fbAsyncInit = function() {
+        FB.init({
+          appId      : appId,
+          status     : true,
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v19.0'
+        });
           
         // FB.AppEvents.logPageView();
 
-    //     FB.getLoginStatus(function(response) {
-    //     statusChangeCallback(response, function() {
-    //         callback(data);
-    //     });
-    // });
+        FB.getLoginStatus(function(response) {
+        statusChangeCallback(response, function() {
+            callback(data);
+        });
+    });
           
-    //   };
+      };
 
 
-// function statusChangeCallback(response) {  
-//     console.log('statusChangeCallback');
-//     console.log(response);
-//     if (response.status === 'connected') {  
-//       testAPI();  
-//     } else {                                 
-//       document.getElementById('status').innerHTML = 'Please log ' +
-//         'into this webpage.';
-//     }
-//   }
+function statusChangeCallback(response) {  
+    console.log('statusChangeCallback');
+    console.log(response);
+    if (response.status === 'connected') {  
+      testAPI();  
+    } else {                                 
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this webpage.';
+    }
+  }
 
-//   function checkLoginState() {               
-//     FB.getLoginStatus(function(response) {   
-//       statusChangeCallback(response);
-//     });
-//   }
+  function checkLoginState() {               
+    FB.getLoginStatus(function(response) {   
+      statusChangeCallback(response);
+    });
+  }
 
  
-//   function testAPI() {                      
-//     console.log('Welcome!  Fetching your information.... ');
-//     FB.api('/me', function(response) {
-//       console.log('Successful login for: ' + response.name);
-//       document.getElementById('status').innerHTML =
-//         'Thanks for logging in, ' + response.name + '!';
-//     });
-//   }
+  function testAPI() {                      
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', 'GET', {"fields": "id,first_name,email"}, 'access_token=EAAOAqrz0UCoBO9Ueq1r9ehjZCy356YJKjm80IJT15yeehobSYrDuOHH9ETBWmg5ly4y2wx2tqbLrqYULIZC7QIAHAZAhI1rjArBbyQuiKBOdlBq8eGTb4iS6iQ7r6URKojtOqjhm3ybvix6OxdikPRlk5l0EA9GZAcdY70dnOr6LOYmfnW0WYEZC3PkuiVwkMWCx7oSntZAmgZBCSkHzieNqhYQcwZDZD', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
 
-// });
+});
