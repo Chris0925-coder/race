@@ -604,13 +604,13 @@ h1,h2,h3,h4,h5,h6 {
 	align-items: center;
 	position: relative;
 	z-index: 1;
-	font-size: 2rem;
+	font-size: 1.1rem;
 	color: rgba(157, 217, 238, 1.0);
 	width: 1em;
 	height: 1em;
 	background-color: rgba(23, 23, 23, 0.9);
-	border: 100%;
-	border-radius: 100%;
+/*	border: 100%;*/
+/*	border-radius: 50%;*/
 	cursor: pointer;
 /*	border: 1px solid green;*/
 }
@@ -620,16 +620,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .chevron #prev {
-	padding-right: .5rem;
-	justify-content: flex-end;
+	padding: .8em .2em;
+/*	padding-right: .5rem;*/
+	justify-content: center;
 /*	border-radius: ;*/
 /*	left: -1.7rem;*/
 }
 
 .chevron #next {
-	padding-right: .5rem;
-	justify-content: flex-start;
-/*	left: -1.7rem;*/
+	padding: .8em .2em;
+/*	padding-right: .5rem;*/
+	justify-content: center;
+/*	right: -1.7rem;*/
 }
 
 .gallery__insta {
@@ -639,7 +641,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .image {
-	min-width: 40%;
+	min-width: 150px;
+	max-width: 300px;
 	height: 273px;
 	position: relative;
 }
